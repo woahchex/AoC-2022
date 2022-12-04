@@ -1,5 +1,5 @@
 local Day1 Day1 = setmetatable({
-  split = function(s, d)
+  split = function(s, d, cast)
     d = d or '\n'
     local out = {}
     local indexLeft = 1
@@ -8,7 +8,7 @@ local Day1 Day1 = setmetatable({
     while indexRight <= #s + 1 do
       indexRight = indexRight + 1
       if s:sub(indexRight, indexRight+#d-1) == d or indexRight > #s then
-        out[#out+1] = s:sub(indexLeft, indexRight-1)
+        out[#out+1] = (cast and tonumber(s:sub(indexLeft, indexRight-1))) or s:sub(indexLeft, indexRight-1)
         indexLeft = indexRight + #d
       end
     end

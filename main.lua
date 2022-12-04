@@ -1,12 +1,13 @@
 local Advent = {
-  DAYS_COMPLETE = 3,
+  DAYS_COMPLETE = 4,
   
   Days = {},
   Input = {},
   Output = { -- Verified correct answers
-    {74198, 209914},
-    {9759, 12429},
-    {7581, 2525}
+    {74198, 209914},       -- Day 1
+    {9759, 12429},         -- Day 2
+    {7581, 2525},          -- Day 3
+    {569, 936},            -- Day 4
   }
 } _G.Advent = Advent
 
@@ -25,3 +26,4 @@ for i = 1, Advent.DAYS_COMPLETE do
 end
 
 Advent.testAll()
+
