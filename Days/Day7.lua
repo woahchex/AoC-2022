@@ -64,7 +64,7 @@ local Day7 Day7 = setmetatable({
 }, {__index = function(_, cmd)
   return setmetatable({}, {__index = function() return Day7.newFile end})
 end, __call = function(_,input)
-  return Day7.solve(input), ({Day7.solve(input)})[2]
+  return Day7.solve(input)
 end})
 
 return Day7
