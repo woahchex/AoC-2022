@@ -1,5 +1,5 @@
 local Advent = {
-  DAYS_COMPLETE = 7,
+  DAYS_COMPLETE = 8,
   
   Days = {},
   Input = {},
@@ -11,6 +11,7 @@ local Advent = {
     {"SHMSDGZVC", "VRZGHDFBQ"},  -- Day 5
     {1802, 3551},                -- Day 6
     {1334506, 7421137},          -- Day 7
+    {1801, 209880},              -- Day 8
   }
 } _G.Advent = Advent
 
@@ -24,8 +25,10 @@ function Advent.testAll()
 end
 
 for i = 1, Advent.DAYS_COMPLETE do
-  Advent.Days[i] = require("AdventOfCode2022/Days/Day"..i)
-  Advent.Input[i] = io.open("AdventOfCode2022/Input/Day"..i .. ".txt", "r"):read("*all")
+  Advent.Days[i] = require("AoC-2022/Days/Day"..i)
+  Advent.Input[i] = io.open("AoC-2022/Input/Day"..i .. ".txt", "r"):read("*all")
 end
 
 Advent.testAll()
+
+--print(Advent.Days[8](Advent.Input[8]))

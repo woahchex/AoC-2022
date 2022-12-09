@@ -16,6 +16,7 @@ local Day4 Day4 = setmetatable({
     end
     return cases    
   end,  
+
   
   solve1 = function(input)
     return Day4.genericSolve(input, false)

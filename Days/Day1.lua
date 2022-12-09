@@ -2,14 +2,14 @@ local Day1 Day1 = setmetatable({
   split = function(s, d, cast)
     d = d or '\n'
     local out = {}
-    local indexLeft = 1
-    local indexRight = 1
+    local il = 1
+    local ir = 1
     
-    while indexRight <= #s + 1 do
-      indexRight = indexRight + 1
-      if s:sub(indexRight, indexRight+#d-1) == d or indexRight > #s then
-        out[#out+1] = (cast and tonumber(s:sub(indexLeft, indexRight-1))) or s:sub(indexLeft, indexRight-1)
-        indexLeft = indexRight + #d
+    while ir <= #s + 1 do
+      ir = ir + 1
+      if s:sub(ir, ir+#d-1) == d or ir > #s then
+        out[#out+1] = (cast and tonumber(s:sub(il, ir-1))) or s:sub(il, ir-1)
+        il = ir + #d
       end
     end
     return out
