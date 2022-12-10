@@ -1,5 +1,5 @@
 local Advent = {
-  DAYS_COMPLETE = 8,
+  DAYS_COMPLETE = 10,
   
   Days = {},
   Input = {},
@@ -12,14 +12,16 @@ local Advent = {
     {1802, 3551},                -- Day 6
     {1334506, 7421137},          -- Day 7
     {1801, 209880},              -- Day 8
+    {5710, false},                 -- Day 9
+    {16020, true},               -- Day 10 (check output)
   }
 } _G.Advent = Advent
 
 function Advent.testAll()
   for i = 1, Advent.DAYS_COMPLETE do
     local part1, part2 = Advent.Days[i](Advent.Input[i])
-    assert(part1 == Advent.Output[i][1], "Day "..i.." Part One failed: "..part1.." ~= "..Advent.Output[i][1].." (Correct)")
-    assert(part2 == Advent.Output[i][2], "Day "..i.." Part Two failed: "..part2.." ~= "..Advent.Output[i][2].." (Correct)")
+    assert(part1 == Advent.Output[i][1], "Day "..i.." Part One failed: "..tostring(part1).." ~= "..tostring(Advent.Output[i][1]).." (Correct)")
+    assert(part2 == Advent.Output[i][2], "Day "..i.." Part Two failed: "..tostring(part2).." ~= "..tostring(Advent.Output[i][2]).." (Correct)")
   end
   print("All tests passed :)!")
 end
@@ -31,4 +33,4 @@ end
 
 Advent.testAll()
 
---print(Advent.Days[8](Advent.Input[8]))
+--print(Advent.Days[10](Advent.Input[10]))
