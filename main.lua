@@ -1,5 +1,5 @@
 local Advent = {
-  DAYS_COMPLETE = 10,
+  DAYS_COMPLETE = 11,
   
   Days = {},
   Input = {},
@@ -12,8 +12,9 @@ local Advent = {
     {1802, 3551},                -- Day 6
     {1334506, 7421137},          -- Day 7
     {1801, 209880},              -- Day 8
-    {5710, false},                 -- Day 9
+    {5710, false},               -- Day 9
     {16020, true},               -- Day 10 (check output)
+    {58322, 13937702909},        -- Day 11
   }
 } _G.Advent = Advent
 
@@ -33,4 +34,4 @@ end
 
 Advent.testAll()
 
---print(Advent.Days[10](Advent.Input[10]))
+--print(Advent.Days[11](Advent.Input[11]))
